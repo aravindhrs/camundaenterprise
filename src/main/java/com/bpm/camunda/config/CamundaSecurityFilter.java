@@ -16,7 +16,7 @@ public class CamundaSecurityFilter {
     registration.setFilter(getProcessEngineAuthenticationFilter());
     registration.addInitParameter("authentication-provider",
         "org.camunda.bpm.engine.rest.security.auth.impl.HttpBasicAuthenticationProvider");
-    registration.addUrlPatterns("/*");
+    registration.addUrlPatterns("/engine-rest/*");
     registration.setOrder(1);
     return registration;
   }
